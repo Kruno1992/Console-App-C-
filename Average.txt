@@ -1,0 +1,14 @@
+            int number1, number2, number3, average;
+
+            Console.WriteLine("Enter 1st number: ");
+            number1 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter 2nd number: ");
+            number2 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter 3rd number: ");
+            number3 = Convert.ToInt32(Console.ReadLine());
+
+            average = (number1 + number2 + number3) / 3;
+
+            Console.WriteLine("Average of all numbers is {0}", average);
+
+            Console.ReadKey();
