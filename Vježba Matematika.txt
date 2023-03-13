@@ -1,0 +1,4 @@
+            Console.WriteLine("10-3=" + (10 - 3));
+            Console.WriteLine("10+3=" + (10 + 3));
+            Console.WriteLine("10*3=" + (10 * 3));
+            Console.WriteLine("10/3=" + (10 / 3));
