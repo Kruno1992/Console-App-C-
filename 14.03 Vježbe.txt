@@ -1,0 +1,75 @@
+            /* Console.WriteLine("Pogodi broj!");
+             int randomGeneratednumber = new Random().Next(1, 10);
+             int randomInputNumber;
+             do
+             {
+                 Console.WriteLine("Unesi Broj:");
+                 randomInputNumber = Int32.Parse(Console.ReadLine());
+             }
+             while (randomGeneratednumber != randomInputNumber);
+             Console.WriteLine("Pogodili ste!");*/
+
+            /* string[] planes = { "JetPlane", "SmallPlane", "Boeing", "Airbus" };
+             for (int i = 0; i < planes.Length; i++)
+             {
+                 Console.WriteLine(planes[i]);
+             }
+
+             Console.ReadLine();*/
+
+            /*string[] bycicles = { "BMX", "Ponika", "MountainBike", "RoadBike" };
+            foreach (string b in bycicles)
+            {
+                Console.WriteLine(b);
+            }
+
+            Console.ReadLine();*/
+
+            /*string[] cars = { "Toyota", "Volvo", "BMW", "Zastava" };
+            Array.Sort(cars);
+            foreach (string i in cars)
+            {
+                Console.WriteLine(i);
+            }
+
+            Console.ReadLine();*/
+
+            /*int[] numbers = { 8, 1, 3, 6, 9 };
+            Array.Sort(numbers);
+            foreach (int i in numbers)
+            {
+                Console.WriteLine(i);
+            }
+
+            Console.ReadLine();*/
+
+            /*int[] numbers = { 9, 10, 20, 40, 100 };
+            Console.WriteLine(numbers.Max());
+            Console.WriteLine(numbers.Min());
+            Console.WriteLine(numbers.Sum());
+
+            Console.ReadLine();*/
+
+            /*int[,] numbers = { { 1, 4, 2 }, { 3, 6, 8 } };
+            Console.WriteLine(numbers[0, 2]);
+
+            Console.ReadLine();*/
+
+            /*int[,] numbers = { { 1, 4, 2 }, { 3, 6, 8 } };
+            for (int i = 0; i < numbers.GetLength(0); i++)
+            {
+                for (int j = 0; j < numbers.GetLength(1); j++)
+                {
+                    Console.WriteLine(numbers[i, j]);
+                }
+            }
+            
+            Console.ReadLine();*/
+
+             void MyMethod(string fname, int age)
+            {
+                Console.WriteLine(fname + " is " + age);
+            }
+                MyMethod("Liam", 5);
+                MyMethod("Jenny", 8);
+                MyMethod("Anja", 31);
