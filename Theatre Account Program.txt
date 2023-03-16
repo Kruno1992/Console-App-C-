@@ -63,13 +63,13 @@ namespace Theatre
                     newUser.Address.State = Console.ReadLine();
                 }
 
-                Console.WriteLine("Enter your postal code:");
-                newUser.Address.PostalCode = Console.ReadLine();
-                while (string.IsNullOrEmpty(newUser.Address.PostalCode))
-                {
-                    Console.WriteLine("Postal code cannot be blank. Please enter your postal code: ");
-                    newUser.Address.PostalCode = Console.ReadLine();
-                }
+                //Console.WriteLine("Enter your postal code:");
+                //newUser.PostalCode = Console.ReadLine();
+                //while (string.IsNullOrEmpty(newUser.Address.PostalCode))
+                //{
+                //    Console.WriteLine("Postal code cannot be blank. Please enter your postal code: ");
+                //    newUser.Address.PostalCode = Console.ReadLine();
+                //}
 
                 newUser.UniqueID = Guid.NewGuid();
 
