@@ -1,0 +1,89 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Net;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Theatre
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("How many accounts do you want to create?");
+            int numAccounts = int.Parse(Console.ReadLine());
+
+            StringBuilder userListBuilder = new StringBuilder();
+
+            for (int i = 1; i <= numAccounts; i++)
+            {
+                Console.WriteLine($"\n---Creating Account {i}---\n");
+
+                User newUser = new User();
+                Address address = new Address();
+
+                Console.WriteLine("Enter desired Nickname: ");
+                newUser.NickName = Console.ReadLine();
+                while (string.IsNullOrEmpty(newUser.NickName))
+                {
+                    Console.WriteLine("Nickname cannot be blank. Please enter a nickname: ");
+                    newUser.NickName = Console.ReadLine();
+                }
+
+                Console.WriteLine("Enter your Name: ");
+                newUser.FirstName = Console.ReadLine();
+                while (string.IsNullOrEmpty(newUser.FirstName))
+                {
+                    Console.WriteLine("Name cannot be blank. Please enter your name: ");
+                    newUser.FirstName = Console.ReadLine();
+                }
+
+                Console.WriteLine("Enter your street address:");
+                newUser.Address.Street = Console.ReadLine();
+                while (string.IsNullOrEmpty(newUser.Address.Street))
+                {
+                    Console.WriteLine("Street address cannot be blank. Please enter your street address: ");
+                    newUser.Address.Street = Console.ReadLine();
+                }
+
+                Console.WriteLine("Enter your city:");
+                newUser.Address.City = Console.ReadLine();
+                while (string.IsNullOrEmpty(newUser.Address.City))
+                {
+                    Console.WriteLine("City cannot be blank. Please enter your city: ");
+                    newUser.Address.City = Console.ReadLine();
+                }
+
+                Console.WriteLine("Enter your state:");
+                newUser.Address.State = Console.ReadLine();
+                while (string.IsNullOrEmpty(newUser.Address.State))
+                {
+                    Console.WriteLine("State cannot be blank. Please enter your state: ");
+                    newUser.Address.State = Console.ReadLine();
+                }
+
+                Console.WriteLine("Enter your postal code:");
+                newUser.Address.PostalCode = Console.ReadLine();
+                while (string.IsNullOrEmpty(newUser.Address.PostalCode))
+                {
+                    Console.WriteLine("Postal code cannot be blank. Please enter your postal code: ");
+                    newUser.Address.PostalCode = Console.ReadLine();
+                }
+
+                newUser.UniqueID = Guid.NewGuid();
+
+                Console.WriteLine($"New user account information:\nNickname: {newUser.NickName} \nName: {newUser.FirstName} \nAddress:{newUser.Address}\nYour Unique UserID:{newUser.UniqueID}");
+
+                userListBuilder.AppendLine($"Nickname: {newUser.NickName} \nName: {newUser.FirstName} \nAddress: {newUser.Address} \nUnique UserID: {newUser.UniqueID}\n");
+            }
+
+            Console.WriteLine("\n---List of User Accounts---\n");
+            Console.WriteLine(userListBuilder.ToString());
+
+            Console.WriteLine("Press any key to continue...");
+            Console.ReadKey();
+        }
+
+    }
+}
