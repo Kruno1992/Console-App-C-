@@ -11,5 +11,6 @@ namespace Theatre
     {
         public string NickName { get; set; }
         public Guid UniqueID { get; set; }
+        
     }
 }
