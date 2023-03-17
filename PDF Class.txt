@@ -1,0 +1,38 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.IO;
+using PdfSharp.Pdf;
+using PdfSharp.Drawing;
+
+namespace PackagePractice
+{
+    public class TextToPdfConverter
+    {
+        private string inputFilePath;
+        private string outputFilePath;
+
+        public TextToPdfConverter(string inputFilePath, string outputFilePath)
+        {
+            this.inputFilePath = inputFilePath;
+            this.outputFilePath = outputFilePath;
+        }
+
+        public void Convert()
+        {
+            PdfDocument document = new PdfDocument();
+            PdfPage page = document.AddPage();
+
+            XGraphics gfx = XGraphics.FromPdfPage(page);
+
+            string text = File.ReadAllText(inputFilePath);
+            XFont font = new XFont("Times New Roman", 15, XFontStyle.Bold);
+
+            gfx.DrawString(text, font, XBrushes.Red, new XRect(0, 0, page.Width, page.Height), XStringFormats.Center);
+
+            document.Save(outputFilePath);
+        }
+    }
+}

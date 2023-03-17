@@ -1,0 +1,27 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.IO;
+using PdfSharp.Drawing;
+using PdfSharp.Pdf;
+
+namespace PackagePractice
+{
+    class Program
+    {
+        static void Main(string[] args)
+
+        {
+            string inputFilePath = @"C:\Users\Krunoslav\Desktop\PDF Practice\Random Message.txt";
+            string outputFilePath = @"C:\Users\Krunoslav\Desktop\PDF Practice\NewRandomMessage.pdf";
+
+            TextToPdfConverter converter = new TextToPdfConverter(inputFilePath, outputFilePath);
+            converter.Convert();
+
+            Console.WriteLine("Conversion complete.");
+            Console.ReadKey();
+        }
+    }
+}
