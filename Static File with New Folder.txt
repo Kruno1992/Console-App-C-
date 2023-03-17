@@ -1,0 +1,9 @@
+/* Statični već gotovi fajl bez konzole i foldera*/
+
+            //string folderpath = @"C:\Users\Krunoslav\Desktop\Mono_Sentence_Exercise";
+            //Directory.CreateDirectory(folderpath);
+
+            //string filename = "Static_File.txt";
+            //string finalFilePath = Path.Combine(folderpath, filename);
+            //string data = "Static test inside of txt file";
+            //File.WriteAllText(finalFilePath, data);

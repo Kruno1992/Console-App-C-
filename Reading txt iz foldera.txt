@@ -1,0 +1,14 @@
+//Read iz foldera txt datoteke\\
+
+            //string FilePath = @"C:\users\Krunoslav\Desktop\Mono_Sentence_Exercise\Static_File.txt";
+
+            //if (File.Exists(FilePath))
+            //{
+            //    string fileContents = File.ReadAllText(FilePath);
+            //    Console.WriteLine("File contents: " + fileContents);
+            //}
+            //else
+            //{
+            //    Console.WriteLine("File does not exist!");
+            //}
+            //Console.ReadKey();

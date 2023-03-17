@@ -1,0 +1,17 @@
+//Read and Write in Txt File\\
+
+            //string filePath = @"C:\users\Krunoslav\Desktop\Mono_Sentence_Exercise\Static_File.txt";
+
+            //List<string> lines = File.ReadAllLines(filePath).ToList();
+
+            //foreach (string line in lines) 
+            //{
+            //    Console.WriteLine(line);
+            //}
+
+            //lines.Add("Wind, Blowing, Forecast");
+
+            //File.WriteAllLines(filePath, lines);
+
+
+            //Console.ReadLine();

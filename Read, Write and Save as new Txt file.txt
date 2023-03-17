@@ -1,0 +1,14 @@
+            //Read, Write and Save new file .txt\\
+
+            // Read the contents of the original text file
+            string originalFilePath = @"C:\users\Krunoslav\Desktop\Mono_Sentence_Exercise\Static_File.txt";
+            string originalContents = File.ReadAllText(originalFilePath);
+
+            // Modify the contents of the text file
+            string modifiedContents = originalContents.Replace("Howdy Partner!\r\nWind, Blowing, Forecast", "Thats not Croatian!\r\nOvo je!");
+
+            // Write the modified contents to a new text file
+            string newFilePath = @"C:\users\Krunoslav\Desktop\Mono_Sentence_Exercise\New_Static_File.txt";
+            File.WriteAllText(newFilePath, modifiedContents);
+
+            Console.ReadKey();
