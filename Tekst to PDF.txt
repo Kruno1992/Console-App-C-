@@ -1,0 +1,23 @@
+            //PDF Dokument, Iz Txt Fajla u PDF\\
+
+            // Napravljeni pathovi za input i output
+            string inputFilePath = @"C:\Users\Krunoslav\Desktop\PDF Practice\Random Message.txt";
+            string outputFilePath = @"C:\Users\Krunoslav\Desktop\PDF Practice\New Random Message.pdf";
+
+            // Kreiranje novog PDF dokumenta
+            PdfDocument document = new PdfDocument();
+            PdfPage page = document.AddPage();
+
+            // Kreiranje Grafike
+            XGraphics gfx = XGraphics.FromPdfPage(page);
+
+            // Čitanje txt dokumenta i postavljanje fonta
+            string text = File.ReadAllText(inputFilePath);
+            XFont font = new XFont("Times New Roman", 15, XFontStyle.Regular);
+
+            // Grafičko ispisivanje teksta
+            gfx.DrawString(text, font, XBrushes.Red,
+                new XRect(20, 20, page.Width, page.Height),XStringFormats.Center);
+
+            // Spremanje PDF dokumenta
+            document.Save(outputFilePath);
